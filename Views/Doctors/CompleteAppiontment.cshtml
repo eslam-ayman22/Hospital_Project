@@ -1,0 +1,49 @@
+﻿
+<form action="/Doctors/savenew" method="post">
+    <h1>Complete Appiontment with @Model.Name</h1>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Patient Name:</label>
+        <input type="text" class="form-control" name="PatientName" />
+    </div>
+    <br>
+    <div class="form-group">
+        <label for="exampleInputPassword1">Appointment Date:</label>
+        <input type="date" class="form-control" name="AppointmentDate">
+    </div>
+    <br>
+    <div class="form-group">
+        <label for="exampleInputPassword1">Appointment Time:</label>
+        <input type="time" class="form-control" name="AppointmentTime">
+    </div>
+    <div class="form-group">
+        <input type="hidden" class="form-control" name="DoctorName" value="@Model.Name">
+        
+    </div>
+
+    <button type="submit" class="btn btn-primary" id="completeAppointmentButton">Complete Appointment</button>
+</form>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="appointmentModal" tabindex="-1" role="dialog" aria-labelledby="appointmentModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="appointmentModalLabel">Appointment Completed</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Your appointment has been successfully completed. Thank you!
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
